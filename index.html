@@ -2,10 +2,12 @@
 <html>
   <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="css/master.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
   <meta charset="utf-8">
   <title></title>
   </head>
@@ -30,48 +32,54 @@
     <div class="container">
       <h1>Convolución</h1>
       <ul class="nav nav-tabs">
-        <li class="active"><a href="#finita" data-toggle="tab">Concolución Finita </a></li>
-        <li><a href="#periodica" data-toggle="tab">Convolución Periodica</a></li>
+        <li class="active"><a href="#periodica" data-toggle="tab">Concolución Periodica </a></li>
+        <li><a href="#finita" data-toggle="tab">Convolución Finita</a></li>
         <li><a href="#circular" data-toggle="tab">Convolución Circular</a></li>
       </ul>
 
     <div id="myTabContent" class="tab-content">
-      <div class="tab-pane fade active in" id="finita">
-        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-      </div>
-      <div class="tab-pane fade" id="periodica">
+      <div class="tab-pane fade active in" id="periodica">
         <h2>Concolución periodica</h2>
         <p>
             Se define como convolución periodica a la operación de convolución que se realiza entre una seciencia de logitud
             finita & otra periódica.
-
-  <form class="form-horizontal" _lpchecked="1">
-  <fieldset>
-    <div class="form-group ">
-        <label class="col-lg-2 control-label" for="focusedInput" >X(n)</label>
-        <div class="col-lg-6 col-md-offset-1">
-          <input class="form-control" id="focusedInput" type="text" value="" >
-        </div>
-
-        <label class="col-lg-2 control-label" for="focusedInput" >Y(n)</label>
-        <div class="col-lg-10">
-          <input class="form-control" id="focusedInput" type="text" value="" >
-        </div>
-    </div>
-
-
-
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Calcular</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
-
         </p>
+        <form class="form-horizontal" _lpchecked="1" name="convPeriodica">
+        <fieldset>
+          <div class="form-group general">
+
+              <label class="col-lg-2 control-label" for="focusedInput" >X(n)</label>
+              <div class="col-lg-10 ">
+                <input class="form-control"  type="text" value="0"  name="operandoX">
+              </div>
+
+              <label class="col-lg-2 control-label" for="focusedInput" >Y(n)</label>
+              <div class="col-lg-10">
+                <input class="form-control"  type="text"  value="0" name="operandoY" >
+              </div>
+
+
+            <div class="col-lg-10 col-lg-offset-2">
+              <input type="button" class="btn btn-primary"  value="Calcular" onclick="calConvolucionPeriodica()">
+
+            </div>
+
+
+          <div class=" has-success">
+              <label class="control-label" for="inputSuccess">Resultado: </label>
+                <input type="text" class="form-control" id="inputSuccess" name="resultado">
+          </div>
+          </div>
+        </fieldset>
+        </form>
+
+
       </div>
+      <div class="tab-pane fade" id="finita">
+
+
+      </div>
+
       <div class="tab-pane fade" id="circular">
         <h2>Convolución Circular</h2>
         <p>
@@ -80,6 +88,9 @@
           <h3>Matematicamente y(n)= x(n) x h(n)</h3>
         </p>
       </div>
+
+
+
     </div>
 
 
