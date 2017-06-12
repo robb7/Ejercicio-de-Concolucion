@@ -44,9 +44,10 @@
             Se define como convolución periodica a la operación de convolución que se realiza entre una seciencia de logitud
             finita & otra periódica.
         </p>
-        <form class="form-horizontal" _lpchecked="1" name="convPeriodica">
+        <form class="form-horizontal operacion" name="convPeriodica">
+           <legend>Calcular: </legend>
         <fieldset>
-          <div class="form-group general">
+          <div class="form-group genera">
 
               <label class="col-lg-2 control-label" for="focusedInput" >X(n)</label>
               <div class="col-lg-10 ">
@@ -61,19 +62,17 @@
 
             <div class="col-lg-10 col-lg-offset-2">
               <input type="button" class="btn btn-primary"  value="Calcular" onclick="calConvolucionPeriodica()">
-
             </div>
 
 
           <div class=" has-success">
               <label class="control-label" for="inputSuccess">Resultado: </label>
-                <input type="text" class="form-control" id="inputSuccess" name="resultado">
+              <p id="test"></p>
+              <input type="text" class="form-control" id="inputSuccess" name="resultado">
           </div>
           </div>
         </fieldset>
         </form>
-
-
       </div>
       <div class="tab-pane fade" id="finita">
 
