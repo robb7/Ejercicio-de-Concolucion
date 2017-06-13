@@ -1,4 +1,4 @@
-function calConvolucionPeriodica(){
+  function calConvolucionPeriodica(){
 
   //Obtener los números de entrada.
   var x_input = document.convPeriodica.operandoX.value;
@@ -46,11 +46,9 @@ function calConvolucionPeriodica(){
   var f=0;
   for (var i = 0; i < ylenght; i++)
   {
-    for (f; f <multlenght; f++)
-    {
-      resultado[i] = mult_array[f]+resultado[i];
-      f+6;
-    }
+    for(var q = 0; q < multlenght; q++)
+    f= q * ylenght +1;
+    resultado[0]= mult_array[q].value +resultado[0].value;
   }
 
 
