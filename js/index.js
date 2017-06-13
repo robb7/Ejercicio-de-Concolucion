@@ -13,38 +13,52 @@ function calConvolucionPeriodica(){
   var y_array = y_input.split(',');
 
   //Calculamos la Longitud
-  var xlenght = x_array.length;
-  var ylenght = y_array.length;
+  var xlenght = x_array.length ;
+  var ylenght = y_array.length ;
 
   //Array Multidimensiona
-  var result_array = new Array();
+  var mult_array = new Array();
+  var multlenght = mult_array.length;
+  //Multiplicacion de Columnas
+  var n=0;
+  var z= 0;
+  //
 
-  for (w =0; w < xlenght; w++) // Altura y
+  for (var x = 0; x < xlenght; x++)
   {
-   result_array[w]=new Array(); // Ancho x
-   for (j=0; j < ylenght; j++)
-   {
-    result_array[w][j]=0;
-   }
+    for (var y=0; y < ylenght; y++)
+    {
+          while (z<x)
+          {
+            mult_array[n]= 0;
+            n++;
+            z++;
+          }
+          mult_array[n] = y_array[y]*x_array[x];
+          n++;
+    }
+          z = 0;
   }
 
-  //Multiplicacion de Columnas
-  for (var d = 0; d < xlenght; d++) {
-    for (var i = 0; i < ylenght; i++)
+
+  //Array Resultado
+  var resultado = new Array(ylenght);
+  var f=0;
+  for (var i = 0; i < ylenght; i++)
+  {
+    for (f; f <multlenght; f++)
     {
-          result_array[d][i] = x_array[d] * y_array[i];
+      resultado[i] = mult_array[f]+resultado[i];
+      f+6;
     }
   }
 
- for (var z = 1; z < ylenght; z++)
- {
-   for (var m = 0; i < z;  m++)
-   {
-     result_array.unshift(0);
-   }
- }
 
   //Test de Salida
   document.getElementById("test").innerHTML =  "x= "+ x_array+"    y= "+ y_array;
-  document.convPeriodica.resultado.value = result_array;
+  //Array completo
+   document.convPeriodica.resultado.value =   resultado;
+  //celda en especifico
+  // document.convPeriodica.resultado.value = result_array[1][0];
+
 }
