@@ -30,7 +30,27 @@
     </div>
     </nav>
     <div class="container">
-      <h1>Convolución</h1>
+      <h1>Convolución de tiempo discreto</h1>
+      <p>
+        En matemáticas y, en particular, análisis funcional, una convoución es un
+        operador matemático que transforma dos funciones f y g en una tercera función.
+        Lo que representa esta tercera función es simplemente la magnitud en la que se
+        superponen f y una versión trasladada e invertida de g.
+      </p>
+      <p>
+        El sifinificado de la convolución varía según las funciones a operar, por ejemplo:
+      </p>
+      <ul>
+        <li>En Ingeniería en Telecomunicaciones, si se convoluciona una señal excitatriz
+        con la respuesta a pulso unitario de un sistema, el resultado es la
+        respuesta del sistema a la mencionada señal excitatriz.</li>
+        <li>La convolución de tiempo discreto también es empleada para multiplicar
+        polinomios.</li>
+        <li>La operación inversa de la convolución o «deconvolución» se emplea para
+        dividir polinomios.</li>
+      </ul>
+      <img id="diagrama" src="img/Convolution3.PNG" alt="">
+
       <ul class="nav nav-tabs">
         <li class="active"><a href="#periodica" data-toggle="tab">Concolución Periodica </a></li>
         <li><a href="#finita" data-toggle="tab">Convolución Finita</a></li>
@@ -46,6 +66,7 @@
         </p>
         <form class="form-horizontal operacion" name="convPeriodica">
            <legend>Calcular: </legend>
+             <label>ej: X= 1,/2,3      Y= /4,10,4,10,4,10</label>
         <fieldset>
           <div class="form-group genera">
 
