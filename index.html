@@ -61,7 +61,7 @@
       <div class="tab-pane fade active in" id="periodica">
         <h2>Concolución periodica</h2>
         <p>
-            Se define como convolución periodica a la operación de convolución que se realiza entre una seciencia de logitud
+            Se define como convolución periodica a la operación de convolución que se realiza entre una secuencia de logitud
             finita & otra periódica.
         </p>
         <form class="form-horizontal operacion" name="convPeriodica">
@@ -96,6 +96,39 @@
         </form>
       </div>
       <div class="tab-pane fade" id="finita">
+      <h2>Concolución Finita</h2>
+        Se define como convolución periodica a la operación de convolución que se realiza entre dos secuencias de longitud finita.
+
+        <form class="form-horizontal operacion" name="convFinita">
+           <legend>Calcular: </legend>
+             <label>ej: X= 1,/2,3      Y= /4,10,4,10,4,10</label>
+        <fieldset>
+          <div class="form-group genera">
+
+              <label class="col-lg-2 control-label" for="focusedInput" >X(n)</label>
+              <div class="col-lg-10 ">
+                <input class="form-control"  type="text" value="1,2,3"  name="operandoX">
+              </div>
+
+              <label class="col-lg-2 control-label" for="focusedInput" >Y(n)</label>
+              <div class="col-lg-10">
+                <input class="form-control"  type="text"  value="4,10" name="operandoY" >
+              </div>
+
+
+            <div class="col-lg-10 col-lg-offset-2">
+              <input type="button" class="btn btn-primary"  value="Calcular" onclick="calConvolucionFinita()">
+            </div>
+
+
+          <div class=" has-success">
+              <label class="control-label" for="inputSuccess">Resultado: </label>
+              <p id="test"></p>
+              <input type="text" class="form-control" id="inputSuccess" name="resultado">
+          </div>
+          </div>
+        </fieldset>
+        </form>
 
 
       </div>
